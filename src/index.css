@@ -1,96 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Yadvi Hybrid Seeds — design system. All colors HSL.
+   Brand palette derived from the YHS logo:
+   - Leaf green (primary)
+   - Royal blue (accent / "YHS")
+   - Magenta-rose (brand highlight)
+   - Warm earthy seed brown
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 48 38% 97%;
+    --foreground: 150 30% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 30% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Leaf green — primary brand */
+    --primary: 142 55% 32%;
+    --primary-foreground: 48 38% 97%;
+    --primary-glow: 130 60% 48%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Royal blue — like YHS letters */
+    --secondary: 222 75% 38%;
+    --secondary-foreground: 48 38% 97%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 48 30% 92%;
+    --muted-foreground: 150 12% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Magenta — brand text accent */
+    --accent: 328 65% 42%;
+    --accent-foreground: 48 38% 97%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Earthy seed brown */
+    --earth: 25 45% 32%;
+    --earth-foreground: 48 38% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warm sun yellow */
+    --sun: 42 88% 62%;
 
-    --radius: 0.5rem;
+    --destructive: 0 70% 48%;
+    --destructive-foreground: 48 38% 97%;
 
-    --sidebar-background: 0 0% 98%;
+    --border: 48 22% 86%;
+    --input: 48 22% 86%;
+    --ring: 142 55% 32%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --radius: 1.25rem;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 55% 22% / 0.78) 0%, hsl(25 45% 18% / 0.55) 60%, hsl(42 88% 50% / 0.25) 100%);
+    --gradient-leaf: linear-gradient(135deg, hsl(142 55% 32%), hsl(130 60% 48%));
+    --gradient-warm: linear-gradient(135deg, hsl(48 38% 97%) 0%, hsl(48 60% 92%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(328 65% 42%), hsl(328 75% 58%));
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -8px hsl(150 30% 12% / 0.12);
+    --shadow-elegant: 0 20px 50px -20px hsl(142 55% 22% / 0.35);
+    --shadow-glow: 0 0 60px hsl(130 60% 48% / 0.35);
+    --shadow-card: 0 8px 32px -12px hsl(150 30% 12% / 0.18);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Motion */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 }
 
@@ -98,8 +77,67 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
   }
 }
+
+@layer components {
+  .container-px {
+    @apply px-5 sm:px-8 lg:px-12;
+  }
+  .glass {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .text-gradient-leaf {
+    background: var(--gradient-leaf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .btn-shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, hsl(0 0% 100% / 0.35) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.8s var(--transition-smooth);
+  }
+  .btn-shine:hover::after {
+    transform: translateX(100%);
+  }
+  .leaf-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+  }
+}
+
+/* AOS slight overrides for premium feel */
+[data-aos] {
+  pointer-events: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: hsl(var(--muted)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--primary) / 0.6); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--primary)); }
