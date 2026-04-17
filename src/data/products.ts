@@ -30,7 +30,6 @@ export interface Product {
   image: string;
   short: string;
   details?: string[];
-  price: number; // INR per packet
   /** Visual span hint for masonry layout (1 = normal, 2 = wide / tall) */
   span?: "tall" | "wide" | "normal";
 }
@@ -42,7 +41,6 @@ export const products: Product[] = [
     category: "Pulses",
     image: cowpea,
     short: "Vigorous, high-yielding research cowpea suitable for rainfed cultivation.",
-    price: 180,
     span: "normal",
   },
   {
@@ -51,7 +49,6 @@ export const products: Product[] = [
     category: "Beans",
     image: dolichos,
     short: "Sturdy hyacinth bean with tender, flavorful pods.",
-    price: 160,
     span: "tall",
   },
   {
@@ -61,7 +58,6 @@ export const products: Product[] = [
     image: ridgeGourd,
     short: "Vigorous F1 ridge gourd with uniform cylindrical fruits.",
     details: ["Length: 30-40 cm", "Color: Glossy green", "Strong vine"],
-    price: 240,
     span: "normal",
   },
   {
@@ -71,7 +67,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Disease tolerant F1 chilli with excellent uniformity.",
     details: ["Maturity: 90-95 days", "Disease tolerant", "Pungent"],
-    price: 320,
     span: "wide",
   },
   {
@@ -80,7 +75,6 @@ export const products: Product[] = [
     category: "Beans",
     image: dolichos,
     short: "Premium research dolichos with rich pod set.",
-    price: 170,
     span: "normal",
   },
   {
@@ -89,7 +83,6 @@ export const products: Product[] = [
     category: "Melon",
     image: watermelon,
     short: "Sweet, crisp F1 watermelon with deep red flesh.",
-    price: 420,
     span: "tall",
   },
   {
@@ -98,7 +91,6 @@ export const products: Product[] = [
     category: "Pulses",
     image: blackGram,
     short: "High-protein black gram (urad) with uniform grain size.",
-    price: 150,
     span: "normal",
   },
   {
@@ -113,7 +105,6 @@ export const products: Product[] = [
       "Length: 15-18 cm",
       "Color: Dark green",
     ],
-    price: 380,
     span: "wide",
   },
   {
@@ -123,7 +114,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Highly pungent chilli, green to red maturity.",
     details: ["Length: 9-10 cm", "Highly pungent", "Color: Green → Red"],
-    price: 340,
     span: "normal",
   },
   {
@@ -132,7 +122,6 @@ export const products: Product[] = [
     category: "Cereal",
     image: maize,
     short: "Robust F1 maize hybrid with golden, uniform cobs.",
-    price: 280,
     span: "tall",
   },
   {
@@ -141,7 +130,6 @@ export const products: Product[] = [
     category: "Tomato",
     image: tomato,
     short: "Determinate F1 tomato with firm, deep red fruits.",
-    price: 360,
     span: "normal",
   },
   {
@@ -150,7 +138,6 @@ export const products: Product[] = [
     category: "Tomato",
     image: tomato,
     short: "High-yielding tomato with excellent shelf life.",
-    price: 360,
     span: "normal",
   },
   {
@@ -159,7 +146,6 @@ export const products: Product[] = [
     category: "Beans",
     image: fieldBeans,
     short: "Premium field beans with tender pods.",
-    price: 165,
     span: "normal",
   },
   {
@@ -169,7 +155,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Highly pungent F1 chilli with uniform fruits.",
     details: ["Highly pungent", "Uniform fruits"],
-    price: 330,
     span: "normal",
   },
   {
@@ -179,7 +164,6 @@ export const products: Product[] = [
     image: okra,
     short: "Dark green okra with soft texture and long shelf life.",
     details: ["Dark green fruits", "Soft texture", "Long shelf life"],
-    price: 290,
     span: "tall",
   },
   {
@@ -189,7 +173,6 @@ export const products: Product[] = [
     image: ridgeGourd,
     short: "Strong & vigorous plant with cylindrical fruits.",
     details: ["Length: 35-45 cm", "Weight: 200-220 gm", "Cylindrical shape"],
-    price: 250,
     span: "normal",
   },
   {
@@ -199,7 +182,6 @@ export const products: Product[] = [
     image: chilli,
     short: "High yield, pungent F1 chilli for commercial growers.",
     details: ["Length: 8-9 cm", "High yield", "Pungent"],
-    price: 320,
     span: "wide",
   },
   {
@@ -208,7 +190,6 @@ export const products: Product[] = [
     category: "Chilli",
     image: chilli,
     short: "Research chilli line bred for resilience.",
-    price: 300,
     span: "normal",
   },
   {
@@ -217,7 +198,6 @@ export const products: Product[] = [
     category: "Okra",
     image: okra,
     short: "Premium F1 okra with smooth, tender pods.",
-    price: 295,
     span: "normal",
   },
   {
@@ -226,7 +206,6 @@ export const products: Product[] = [
     category: "Gourd",
     image: bitterGourd,
     short: "Research bitter gourd with intense flavor.",
-    price: 350,
     span: "normal",
   },
   {
@@ -235,7 +214,6 @@ export const products: Product[] = [
     category: "Flower",
     image: marigold,
     short: "Bright, double-petaled marigold for cut flower & garlands.",
-    price: 220,
     span: "tall",
   },
   {
@@ -245,7 +223,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Early harvest F1 chilli with long fruits.",
     details: ["Length: 12-16 cm", "Early harvest"],
-    price: 340,
     span: "normal",
   },
   {
@@ -255,7 +232,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Long duration F1 chilli with strong market demand.",
     details: ["Length: 15-17 cm", "Long duration crop", "High demand"],
-    price: 360,
     span: "wide",
   },
   {
@@ -264,7 +240,6 @@ export const products: Product[] = [
     category: "Gourd",
     image: bitterGourd,
     short: "Vigorous research bitter gourd with continuous bearing.",
-    price: 340,
     span: "normal",
   },
   {
@@ -274,7 +249,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Medium pungent, high-yielding chilli.",
     details: ["Length: 13-15 cm", "Medium pungent", "High yield"],
-    price: 330,
     span: "normal",
   },
   {
@@ -283,7 +257,6 @@ export const products: Product[] = [
     category: "Melon",
     image: watermelon,
     short: "Large F1 watermelon with high TSS sweetness.",
-    price: 430,
     span: "normal",
   },
   {
@@ -293,7 +266,6 @@ export const products: Product[] = [
     image: chilli,
     short: "Early harvest F1 chilli with strong plant vigor.",
     details: ["Length: 12-16 cm", "Early harvest"],
-    price: 340,
     span: "normal",
   },
   {
@@ -302,7 +274,6 @@ export const products: Product[] = [
     category: "Gourd",
     image: bitterGourd,
     short: "Premium F1 bitter gourd with continuous bearing.",
-    price: 370,
     span: "tall",
   },
   {
@@ -311,7 +282,6 @@ export const products: Product[] = [
     category: "Flower",
     image: marigold,
     short: "Brilliant orange marigold blooms for festival markets.",
-    price: 230,
     span: "normal",
   },
   {
@@ -320,7 +290,6 @@ export const products: Product[] = [
     category: "Gourd",
     image: bottleGourd,
     short: "F1 bottle gourd with uniform, glossy long fruits.",
-    price: 260,
     span: "normal",
   },
 ];
