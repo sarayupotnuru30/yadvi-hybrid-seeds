@@ -9,7 +9,6 @@ export interface CartItem extends Product {
 interface CartContextValue {
   items: CartItem[];
   count: number;
-  total: number;
   addToCart: (product: Product) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, qty: number) => void;
@@ -60,16 +59,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const clear = () => setItems([]);
 
-  const { count, total } = useMemo(
-    () => ({
-      count: items.reduce((s, i) => s + i.quantity, 0),
-      total: items.reduce((s, i) => s + i.quantity * i.price, 0),
-    }),
-    [items],
-  );
+  const count = useMemo(() => items.reduce((s, i) => s + i.quantity, 0), [items]);
 
   return (
-    <CartContext.Provider value={{ items, count, total, addToCart, removeFromCart, updateQuantity, clear }}>
+    <CartContext.Provider value={{ items, count, addToCart, removeFromCart, updateQuantity, clear }}>
       {children}
     </CartContext.Provider>
   );

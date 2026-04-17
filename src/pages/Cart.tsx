@@ -5,23 +5,18 @@ import { useCart } from "@/context/CartContext";
 const WHATSAPP_NUMBER = "919052110028";
 
 const Cart = () => {
-  const { items, total, updateQuantity, removeFromCart, clear } = useCart();
+  const { items, count, updateQuantity, removeFromCart, clear } = useCart();
 
   const buildWhatsAppLink = () => {
     const lines = [
       "Hello Yadvi Hybrid Seeds! 👋",
-      "I'd like to place an order for the following items:",
+      "I'd like to enquire about the following items:",
       "",
       ...items.map(
-        (i, idx) =>
-          `${idx + 1}. ${i.name} — Qty: ${i.quantity} × ₹${i.price} = ₹${
-            i.quantity * i.price
-          }`,
+        (i, idx) => `${idx + 1}. ${i.name} — Qty: ${i.quantity}`,
       ),
       "",
-      `*Total: ₹${total}*`,
-      "",
-      "Please confirm availability and delivery details.",
+      "Please share pricing and availability. Thank you!",
     ];
     const msg = encodeURIComponent(lines.join("\n"));
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`;
@@ -32,14 +27,15 @@ const Cart = () => {
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl mb-10" data-aos="fade-up">
           <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-accent">
-            <span className="h-px w-8 bg-accent" /> Your Cart
+            <span className="h-px w-8 bg-accent" /> Your Enquiry
           </span>
           <h1 className="mt-4 font-display text-5xl font-bold leading-tight">
-            Review &amp; <span className="text-gradient-leaf">place your order</span>
+            Review &amp; <span className="text-gradient-leaf">send your enquiry</span>
           </h1>
           <p className="mt-4 text-muted-foreground">
-            Confirm your selection below and complete your order via WhatsApp —
-            our team will respond within business hours.
+            Confirm your selection below and send your enquiry via WhatsApp —
+            our team will share pricing, availability and delivery details
+            within business hours.
           </p>
         </div>
 
@@ -53,7 +49,7 @@ const Cart = () => {
             </div>
             <h2 className="font-display text-2xl font-semibold">Your cart is empty</h2>
             <p className="mt-2 text-muted-foreground">
-              Browse our hybrid seed catalogue to start building your order.
+              Browse our hybrid seed catalogue to start building your enquiry.
             </p>
             <Link
               to="/products"
@@ -89,11 +85,11 @@ const Cart = () => {
                     <h3 className="font-display text-lg font-semibold leading-tight truncate">
                       {item.name}
                     </h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      ₹{item.price} per packet
+                    <p className="mt-1 text-sm text-muted-foreground line-clamp-1">
+                      {item.short}
                     </p>
 
-                    <div className="mt-3 flex items-center gap-3">
+                    <div className="mt-3 flex items-center gap-3 flex-wrap">
                       <div className="inline-flex items-center rounded-full border border-border bg-background overflow-hidden">
                         <button
                           aria-label="Decrease"
@@ -121,15 +117,6 @@ const Cart = () => {
                       </button>
                     </div>
                   </div>
-
-                  <div className="text-right shrink-0">
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
-                      Subtotal
-                    </p>
-                    <p className="font-display text-xl font-bold text-accent">
-                      ₹{item.price * item.quantity}
-                    </p>
-                  </div>
                 </div>
               ))}
 
@@ -146,26 +133,25 @@ const Cart = () => {
               className="lg:sticky lg:top-28 self-start bg-gradient-leaf text-primary-foreground rounded-3xl p-7 shadow-elegant"
               data-aos="fade-left"
             >
-              <h2 className="font-display text-2xl font-semibold">Order Summary</h2>
+              <h2 className="font-display text-2xl font-semibold">Enquiry Summary</h2>
+              <p className="mt-2 text-sm text-primary-foreground/85">
+                Pricing &amp; availability will be shared by our team via WhatsApp.
+              </p>
+
               <div className="mt-6 space-y-3 text-sm">
                 <div className="flex justify-between opacity-90">
-                  <span>Items</span>
-                  <span>{items.reduce((s, i) => s + i.quantity, 0)}</span>
+                  <span>Unique Products</span>
+                  <span className="font-semibold">{items.length}</span>
                 </div>
                 <div className="flex justify-between opacity-90">
-                  <span>Subtotal</span>
-                  <span>₹{total}</span>
-                </div>
-                <div className="flex justify-between opacity-90">
-                  <span>Shipping</span>
-                  <span>Calculated on order</span>
+                  <span>Total Packets</span>
+                  <span className="font-semibold">{count}</span>
                 </div>
               </div>
-              <div className="mt-6 pt-6 border-t border-primary-foreground/20 flex justify-between items-baseline">
-                <span className="font-display text-lg">Total</span>
-                <span className="font-display text-3xl font-bold text-sun">
-                  ₹{total}
-                </span>
+
+              <div className="mt-6 pt-6 border-t border-primary-foreground/20">
+                <p className="text-xs uppercase tracking-[0.2em] opacity-75">Next Step</p>
+                <p className="mt-1 font-display text-xl">Send your enquiry on WhatsApp</p>
               </div>
 
               <a
@@ -179,7 +165,7 @@ const Cart = () => {
               </a>
 
               <p className="mt-4 text-xs text-primary-foreground/80 text-center leading-relaxed">
-                Pre-filled message with your order will open in WhatsApp.
+                Pre-filled message with your selected items will open in WhatsApp.
                 Our team will confirm pricing &amp; delivery.
               </p>
             </aside>

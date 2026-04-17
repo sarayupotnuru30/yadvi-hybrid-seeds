@@ -48,22 +48,17 @@ const ProductCard = ({ product, className, imageHeightClass = "h-64" }: Props) =
           </ul>
         )}
 
-        <div className="mt-5 flex items-center justify-between">
-          <div>
-            <p className="text-[11px] uppercase tracking-wider text-muted-foreground">From</p>
-            <p className="font-display text-2xl font-bold text-accent">
-              ₹{product.price}
-              <span className="text-xs text-muted-foreground font-sans font-normal ml-1">
-                /pkt
-              </span>
-            </p>
-          </div>
+        <div className="mt-6 flex items-center justify-between gap-3">
+          <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary-glow animate-pulse" />
+            In stock
+          </span>
           <button
             onClick={() => addToCart(product)}
-            className="btn-shine group/btn inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-4 py-2.5 text-sm font-semibold shadow-soft hover:shadow-glow transition-all hover:scale-105"
+            className="btn-shine group/btn inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2.5 text-sm font-semibold shadow-soft hover:shadow-glow transition-all hover:scale-105"
           >
             <Plus className="h-4 w-4 transition-transform group-hover/btn:rotate-90" />
-            Add
+            Add to Cart
           </button>
         </div>
       </div>
