@@ -1,16 +1,34 @@
-import chilli from "@/assets/products/chilli.jpg";
-import ridgeGourd from "@/assets/products/ridge-gourd.jpg";
-import bitterGourd from "@/assets/products/bitter-gourd.jpg";
-import tomato from "@/assets/products/tomato.jpg";
-import okra from "@/assets/products/okra.jpg";
-import watermelon from "@/assets/products/watermelon.jpg";
-import maize from "@/assets/products/maize.jpg";
-import cowpea from "@/assets/products/cowpea.jpg";
-import dolichos from "@/assets/products/dolichos.jpg";
-import fieldBeans from "@/assets/products/field-beans.jpg";
-import blackGram from "@/assets/products/black-gram.jpg";
-import bottleGourd from "@/assets/products/bottle-gourd.jpg";
-import marigold from "@/assets/products/marigold.jpg";
+import gangaCowpea from "@/assets/products/ganga-cowpea.jpg";
+import cholaDolichos from "@/assets/products/chola-dolichos.jpg";
+import sandyRidge from "@/assets/products/sandy-ridge.jpg";
+import ram55Chilli from "@/assets/products/ram-55-chilli.jpg";
+import lakshmiDolichos from "@/assets/products/lakshmi-dolichos.jpg";
+import kuberaWatermelon from "@/assets/products/kubera-watermelon.jpg";
+import blackGramImg from "@/assets/products/black-gram.jpg";
+import suryaBitter from "@/assets/products/surya-bitter.jpg";
+import kanaka999 from "@/assets/products/kanaka-999.jpg";
+import yhs999Maize from "@/assets/products/yhs-999-maize.jpg";
+import veeraTomato from "@/assets/products/veera-tomato.jpg";
+import arudhraTomato from "@/assets/products/arudhra-tomato.jpg";
+import siriFieldBeans from "@/assets/products/siri-field-beans.jpg";
+import krishna5Chilli from "@/assets/products/krishna-5-chilli.jpg";
+import yh222Okra from "@/assets/products/yh-222-okra.jpg";
+import venkey6Ridge from "@/assets/products/venkey-6-ridge.jpg";
+import adyaChilli from "@/assets/products/adya-chilli.jpg";
+import dolly26 from "@/assets/products/dolly-26.jpg";
+import leonOkra from "@/assets/products/leon-okra.jpg";
+import katahiBitter from "@/assets/products/katahi-bitter.jpg";
+import bjeemaMarigold from "@/assets/products/bjeema-marigold.jpg";
+import championChilli from "@/assets/products/champion-chilli.jpg";
+import chervi22 from "@/assets/products/chervi-22.jpg";
+import karthiBitter from "@/assets/products/karthi-bitter.jpg";
+import divya27 from "@/assets/products/divya-27.jpg";
+import megaWatermelon from "@/assets/products/mega-watermelon.jpg";
+import panja36 from "@/assets/products/panja-36.jpg";
+import ruhanBitter from "@/assets/products/ruhan-bitter.jpg";
+import ramMarigold from "@/assets/products/ram-marigold.jpg";
+import gowravBottle from "@/assets/products/gowrav-bottle.jpg";
+import amaranChilli from "@/assets/products/amaran-chilli.jpg";
 
 export type ProductCategory =
   | "Chilli"
@@ -37,21 +55,21 @@ export const products: Product[] = [
     id: "ganga-cowpea",
     name: "Ganga Research Cowpea",
     category: "Pulses",
-    image: cowpea,
+    image: gangaCowpea,
     short: "Vigorous, high-yielding research cowpea suitable for rainfed cultivation.",
   },
   {
     id: "chola-dolichos",
     name: "Chola Research Dolichos",
     category: "Beans",
-    image: dolichos,
+    image: cholaDolichos,
     short: "Sturdy hyacinth bean with tender, flavorful pods.",
   },
   {
     id: "sandy-ridge",
     name: "Sandy F1 Hybrid Ridge Gourd",
     category: "Gourd",
-    image: ridgeGourd,
+    image: sandyRidge,
     short:
       "Dark green, shiny, and cylindrical with deep, prominent ridges.",
     details: [
@@ -64,7 +82,7 @@ export const products: Product[] = [
     id: "ram-55-chilli",
     name: "Ram-55 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: ram55Chilli,
     short:
       "Vigorous, high-yielding chilli with high tolerance to TOLCV — best in Kharif and Summer.",
     details: [
@@ -80,14 +98,14 @@ export const products: Product[] = [
     id: "lakshmi-dolichos",
     name: "Lakshmi Research Dolichos",
     category: "Beans",
-    image: dolichos,
+    image: lakshmiDolichos,
     short: "Premium research dolichos with rich pod set.",
   },
   {
     id: "kubera-watermelon",
     name: "Kubera F1 Hybrid Watermelon",
     category: "Melon",
-    image: watermelon,
+    image: kuberaWatermelon,
     short:
       "High-yielding F1 watermelon ideal for long-distance transport, maturing in 80–85 days.",
     details: [
@@ -101,14 +119,14 @@ export const products: Product[] = [
     id: "black-gram",
     name: "Black Gram",
     category: "Pulses",
-    image: blackGram,
+    image: blackGramImg,
     short: "High-protein black gram (urad) with uniform grain size.",
   },
   {
     id: "surya-bitter",
     name: "Surya F1 Hybrid Bitter Gourd",
     category: "Gourd",
-    image: bitterGourd,
+    image: suryaBitter,
     short:
       "Half long spiny F1 bitter gourd with vigorous vines and dark green fruits.",
     details: [
@@ -125,7 +143,7 @@ export const products: Product[] = [
     id: "kanaka-999",
     name: "Kanaka-999 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: kanaka999,
     short:
       "A very highly pungent, attractive dual-purpose chilli hybrid which is easy to pick and bears uniform fruits 9–10 cm long and 0.8–1 cm in diameter. Dark green when immature, turns red on maturity, with moderately wrinkled surface.",
   },
@@ -133,7 +151,7 @@ export const products: Product[] = [
     id: "yhs-999-maize",
     name: "YHS-999 F1 Hybrid Maize",
     category: "Cereal",
-    image: maize,
+    image: yhs999Maize,
     short:
       "Yadvi YHS-999 Elite is a medium-maturity hybrid maize known for high yield and superior standability with attractive orange grains.",
     details: [
@@ -147,7 +165,7 @@ export const products: Product[] = [
     id: "veera-tomato",
     name: "Veera F1 Hybrid Tomato",
     category: "Tomato",
-    image: tomato,
+    image: veeraTomato,
     short:
       "High-yielding, heat-tolerant tomato popular for commercial farming and home gardens. Medium-sized, firm, oblong red fruits (80–90 gm) with good transportability, strong disease resistance and excellent shelf life.",
   },
@@ -155,7 +173,7 @@ export const products: Product[] = [
     id: "arudhra-tomato",
     name: "Arudhra F1 Hybrid Tomato",
     category: "Tomato",
-    image: tomato,
+    image: arudhraTomato,
     short:
       "Flat round, uniform tomato with attractive deep red colour and high cracking tolerance.",
     details: [
@@ -169,14 +187,14 @@ export const products: Product[] = [
     id: "siri-field-beans",
     name: "Siri Research Field Beans",
     category: "Beans",
-    image: fieldBeans,
+    image: siriFieldBeans,
     short: "Premium field beans with tender pods.",
   },
   {
     id: "krishna-5-chilli",
     name: "Krishna-5 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: krishna5Chilli,
     short:
       "A very highly pungent, attractive dual-purpose chilli hybrid which is easy to pick and bears uniform fruits 9–10 cm long and 0.8–1 cm in diameter. Dark green when immature, turns red on maturity, with moderately wrinkled surface.",
   },
@@ -184,7 +202,7 @@ export const products: Product[] = [
     id: "yh-222-okra",
     name: "YH-222 F1 Hybrid Bendhi (Okra)",
     category: "Okra",
-    image: okra,
+    image: yh222Okra,
     short:
       "Known for its robust growth and long shelf life — a reliable choice for farmers and gardeners alike. Medium-height plant with 2–4 branches; fruits are dark green, densely clustered, with a soft texture for a high-quality harvest.",
   },
@@ -192,7 +210,7 @@ export const products: Product[] = [
     id: "venkey-6-ridge",
     name: "Venkey-6 F1 Hybrid Ridge Gourd",
     category: "Gourd",
-    image: ridgeGourd,
+    image: venkey6Ridge,
     short: "Strong & vigorous plant with cylindrical fruits.",
     details: ["Length: 35–45 cm", "Weight: 200–220 gm", "Cylindrical shape"],
   },
@@ -200,7 +218,7 @@ export const products: Product[] = [
     id: "adya-chilli",
     name: "Adya F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: adyaChilli,
     short:
       "A very high pungent and high-yielding dual-purpose chilli hybrid with fruit length 8–9 cm and diameter 0.7–0.9 cm. Dark green when immature, glossy red on maturity, with moderately wrinkled surface and high capsaicin.",
   },
@@ -208,14 +226,14 @@ export const products: Product[] = [
     id: "dolly-26",
     name: "Dolly-26 Research",
     category: "Chilli",
-    image: chilli,
+    image: dolly26,
     short: "Research chilli line bred for resilience.",
   },
   {
     id: "leon-okra",
     name: "Leon F1 Hybrid Bendhi (Okra)",
     category: "Okra",
-    image: okra,
+    image: leonOkra,
     short:
       "A high-yielding variety known for its vigorous, tall plants and dark green, 14–16 cm long pods. Popular for commercial cultivation due to its high virus tolerance (YVMV/ELCV), zigzag bearing pattern and early maturity (43–50 days).",
   },
@@ -223,14 +241,14 @@ export const products: Product[] = [
     id: "katahi-bitter",
     name: "Katahi Research Bitter Gourd",
     category: "Gourd",
-    image: bitterGourd,
+    image: katahiBitter,
     short: "Research bitter gourd with intense flavor.",
   },
   {
     id: "bjeema-marigold",
     name: "Bheema (Orange Queen) F1 Hybrid Marigold",
     category: "Flower",
-    image: marigold,
+    image: bjeemaMarigold,
     short:
       "A high-yielding hybrid marigold known for its tall, erect plants (60–100 cm) and large, golden-orange, double-floret flowers. Popular for high yield, fast maturity (45–65 days) and excellent suitability for long-distance transport — ideal for cut flowers and commercial farming.",
   },
@@ -238,7 +256,7 @@ export const products: Product[] = [
     id: "champion-chilli",
     name: "Champion F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: championChilli,
     short:
       "Fruit length 12–16 cm, width 1.2–1.4 cm, with a short, early harvest cycle — often ready in 45–55 days.",
   },
@@ -246,7 +264,7 @@ export const products: Product[] = [
     id: "chervi-22",
     name: "Chervi-22 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: chervi22,
     short:
       "Long-strong bushy plant with first harvest at 50–55 DAP. A long-duration crop with heavy demand for both green and red — dry chilli weight is more than other varieties.",
     details: [
@@ -263,14 +281,14 @@ export const products: Product[] = [
     id: "karthi-bitter",
     name: "Karthi Research Bitter Gourd",
     category: "Gourd",
-    image: bitterGourd,
+    image: karthiBitter,
     short: "Vigorous research bitter gourd with continuous bearing.",
   },
   {
     id: "divya-27",
     name: "Divya-27 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: divya27,
     short:
       "Light green, semi-wrinkled fruits with firm skin. Very early variety with high yield, good heat tolerance and firm fruit suitable for transport.",
     details: [
@@ -285,7 +303,7 @@ export const products: Product[] = [
     id: "mega-watermelon",
     name: "Mega F1 Hybrid Watermelon",
     category: "Melon",
-    image: watermelon,
+    image: megaWatermelon,
     short:
       "A premium F1 hybrid watermelon known for its black, oblong, 3–5 kg fruits and deep red, crispy flesh with high sugar content (13% TSS). Popular for high yield, rapid 65–70 day maturity and durability for long-distance transport.",
   },
@@ -293,7 +311,7 @@ export const products: Product[] = [
     id: "panja-36",
     name: "Panja-36 F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: panja36,
     short:
       "Fruit length 12–16 cm, width 1.2–1.4 cm, with a short, early harvest cycle — often ready in 45–55 days.",
   },
@@ -301,7 +319,7 @@ export const products: Product[] = [
     id: "ruhan-bitter",
     name: "Ruhan F1 Hybrid Bitter Gourd",
     category: "Gourd",
-    image: bitterGourd,
+    image: ruhanBitter,
     short:
       "High-yielding, early-maturing F1 hybrid bitter gourd suited for both small and medium-spiny segments. Produces dark green, firm, 12–14 cm long fruits with excellent shipping quality and strong disease tolerance.",
     details: [
@@ -315,7 +333,7 @@ export const products: Product[] = [
     id: "ram-marigold",
     name: "Ram F1 Hybrid Marigold",
     category: "Flower",
-    image: marigold,
+    image: ramMarigold,
     short:
       "A high-yielding, yellow F1 hybrid marigold known for its tall, bushy growth (60–90 cm) and large, firm 'tennis ball' flowers — popular for commercial cut flower use. Suitable for all seasons in India with high yield potential and excellent transportation quality.",
   },
@@ -323,14 +341,14 @@ export const products: Product[] = [
     id: "gowrav-bottle",
     name: "Gowrav F1 Hybrid Bottle Gourd",
     category: "Gourd",
-    image: bottleGourd,
+    image: gowravBottle,
     short: "F1 bottle gourd with uniform, glossy long fruits.",
   },
   {
     id: "amaran-chilli",
     name: "Amaran F1 Hybrid Chilli",
     category: "Chilli",
-    image: chilli,
+    image: amaranChilli,
     short:
       "Semi-wrinkled, dark green to glossy red chilli with intermediate resistance to Chilli Leaf Curl Virus. Early-maturing, semi-erect, vigorous plant — ideal for both fresh green market and dry red processing.",
     details: [
