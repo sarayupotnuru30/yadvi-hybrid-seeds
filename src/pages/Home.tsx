@@ -217,7 +217,7 @@ const Home = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {featuredProducts.map((p, i) => (
                 <div key={p.id} data-aos="fade-up" data-aos-delay={i * 80}>
-                  <ProductCard product={p} imageHeightClass="h-56" />
+                  <ProductCard product={p} />
                 </div>
               ))}
             </div>

@@ -34,6 +34,7 @@ const team = [
 const About = () => {
   return (
     <>
+      {/* Hero */}
       <section className="container-px pt-12 pb-16">
         <div className="mx-auto max-w-5xl text-center">
           <span
@@ -51,54 +52,178 @@ const About = () => {
             <span className="block text-gradient-leaf italic">a single seed.</span>
           </h1>
           <p
-            className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Yadvi Hybrid Seeds Pvt. Ltd. is a farmer-first seed company combining
-            decades of agronomic experience with modern plant breeding science.
+            Yadvi Hybrid Seeds Pvt Ltd is a dedicated agricultural seed company
+            committed to delivering high-quality hybrid seeds that empower
+            farmers to achieve better productivity and sustainable growth.
           </p>
         </div>
       </section>
 
-      {/* Mission / Vision / Values */}
+      {/* Company narrative */}
       <section className="container-px pb-20">
-        <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-6">
-          {[
-            {
-              icon: Target,
-              title: "Our Mission",
-              desc: "To empower every farmer with hybrid seeds that maximise yield, resilience, and profitability — season after season.",
-            },
-            {
-              icon: Leaf,
-              title: "Our Vision",
-              desc: "To become India's most trusted hybrid seed brand, rooted in research and respected for honesty.",
-            },
-            {
-              icon: Heart,
-              title: "Our Promise",
-              desc: "Premium genetics, transparent pricing, and a relationship that lasts beyond a single harvest.",
-            },
-          ].map((b, i) => (
-            <div
-              key={b.title}
-              data-aos="fade-up"
-              data-aos-delay={i * 120}
-              className="bg-card rounded-3xl p-8 border border-border/50 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1"
-            >
-              <div className="h-14 w-14 rounded-2xl bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
-                <b.icon className="h-7 w-7" />
-              </div>
-              <h3 className="mt-5 font-display text-2xl font-semibold">{b.title}</h3>
-              <p className="mt-3 text-muted-foreground leading-relaxed">{b.desc}</p>
+        <div className="mx-auto max-w-4xl space-y-6 text-base sm:text-lg leading-relaxed text-foreground/85">
+          <p data-aos="fade-up">
+            With a strong focus on innovation, quality, and farmer satisfaction,
+            we strive to support modern agriculture with reliable and
+            performance-driven seed solutions.
+          </p>
+          <p data-aos="fade-up">
+            Our company works closely with farmers, dealers, and agricultural
+            experts to understand field conditions and provide seeds that
+            perform consistently across different environments. Through
+            continuous research and strict quality control, we ensure that every
+            seed meets high standards of purity, germination, and yield
+            potential.
+          </p>
+          <p data-aos="fade-up">
+            At Yadvi Hybrid Seeds Pvt Ltd, we believe that farmers are the
+            backbone of our nation. Our goal is not just to sell seeds, but to
+            build long-term relationships by offering trust, guidance, and
+            dependable products that contribute to farmers' success.
+          </p>
+          <p data-aos="fade-up">
+            We are committed to promoting sustainable farming practices and
+            contributing to increased agricultural productivity, helping create
+            a better future for farmers and society.
+          </p>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="container-px pb-20">
+        <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-6">
+          <div
+            data-aos="fade-up"
+            className="bg-card p-10 border border-border/60 shadow-card hover:shadow-elegant transition-all"
+          >
+            <div className="h-14 w-14 bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
+              <Leaf className="h-7 w-7" />
             </div>
-          ))}
+            <h3 className="mt-5 font-display text-3xl font-semibold">
+              🌱 Our Vision
+            </h3>
+            <p className="mt-4 text-lg italic text-foreground/85 leading-relaxed">
+              "To expand globally as a recognized brand in hybrid seeds,
+              ensuring food security and agricultural excellence."
+            </p>
+            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              Verity = 100±
+            </p>
+          </div>
+
+          <div
+            data-aos="fade-up"
+            data-aos-delay="120"
+            className="bg-card p-10 border border-border/60 shadow-card hover:shadow-elegant transition-all"
+          >
+            <div className="h-14 w-14 bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
+              <Target className="h-7 w-7" />
+            </div>
+            <h3 className="mt-5 font-display text-3xl font-semibold">
+              🌱 Our Mission
+            </h3>
+            <p className="mt-4 text-lg italic text-foreground/85 leading-relaxed">
+              "To provide high-quality, reliable hybrid seeds through continuous
+              research, innovation, and farmer support — helping farmers achieve
+              better yields, improved income, and sustainable agriculture."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Promise */}
+      <section className="container-px pb-20">
+        <div className="mx-auto max-w-4xl">
+          <div
+            data-aos="fade-up"
+            className="bg-card p-10 border border-border/60 shadow-card text-center"
+          >
+            <div className="mx-auto h-14 w-14 bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
+              <Heart className="h-7 w-7" />
+            </div>
+            <h3 className="mt-5 font-display text-2xl font-semibold">Our Promise</h3>
+            <p className="mt-3 text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Premium genetics, transparent dealings, and a relationship that
+              lasts beyond a single harvest.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder's Note */}
+      <section className="bg-gradient-warm py-24 container-px">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-accent">
+              <span className="h-px w-8 bg-accent" /> Founder's Note
+            </span>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold">
+              A message from <span className="text-gradient-accent">our founder</span>
+            </h2>
+          </div>
+
+          <div
+            className="grid md:grid-cols-[280px_1fr] gap-10 items-start"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div className="bg-card border border-border/60 shadow-card overflow-hidden">
+              <div className="aspect-[3/4] bg-muted overflow-hidden">
+                <img
+                  src={surendra}
+                  alt="Madineni Surendra Kumar — Founder of Yadvi Hybrid Seeds"
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <p className="text-[11px] uppercase tracking-[0.25em] text-accent font-semibold">
+                  Founder & CEO
+                </p>
+                <h3 className="mt-1 font-display text-xl font-semibold">
+                  Madineni Surendra Kumar
+                </h3>
+              </div>
+            </div>
+
+            <div className="space-y-5 text-base sm:text-lg leading-relaxed text-foreground/85">
+              <p>
+                I am <strong>Madineni Surendra Kumar</strong>, the founder of
+                Yadvi Hybrid Seeds Pvt Ltd, driven by a deep passion for
+                agriculture and farmer development. Coming from a background
+                closely connected to farming, I understand the real challenges
+                faced by farmers in achieving better yields and stable income.
+              </p>
+              <p>
+                With a vision to make a meaningful difference in the
+                agricultural sector, I established Yadvi Hybrid Seeds Pvt Ltd
+                to provide high-quality, reliable hybrid seeds that farmers can
+                trust. My focus has always been on quality, innovation, and
+                building long-term relationships with farmers and dealers.
+              </p>
+              <p>
+                I strongly believe that the success of agriculture begins with
+                the quality of seeds. Through continuous learning, field
+                experience, and commitment to excellence, I aim to support
+                farmers with better solutions that improve productivity and
+                sustainability.
+              </p>
+              <p>
+                My goal is to grow Yadvi Hybrid Seeds Pvt Ltd into a trusted
+                and leading seed company, contributing to the progress of
+                farmers and the agricultural economy.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Team */}
-      <section className="bg-gradient-warm py-24 container-px">
+      <section className="container-px py-24">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-14" data-aos="fade-up">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-accent">
@@ -119,7 +244,7 @@ const About = () => {
                 key={m.name}
                 data-aos="fade-up"
                 data-aos-delay={i * 100}
-                className="group relative bg-card rounded-3xl overflow-hidden shadow-card border border-border/50 hover:shadow-elegant hover:-translate-y-2 transition-all duration-500"
+                className="group relative bg-card overflow-hidden shadow-card border border-border/60 hover:shadow-elegant hover:-translate-y-2 transition-all duration-500"
               >
                 <div className="relative aspect-[3/4] overflow-hidden bg-muted">
                   <img
@@ -150,10 +275,10 @@ const About = () => {
       </section>
 
       {/* Stats band */}
-      <section className="container-px py-24">
+      <section className="container-px pb-24">
         <div className="mx-auto max-w-7xl">
           <div
-            className="rounded-[2.5rem] bg-earth text-earth-foreground p-12 md:p-16 relative overflow-hidden"
+            className="bg-earth text-earth-foreground p-12 md:p-16 relative overflow-hidden"
             data-aos="zoom-in"
           >
             <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-primary-glow/30 blur-3xl" />

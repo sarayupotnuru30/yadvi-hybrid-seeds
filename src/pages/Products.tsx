@@ -40,7 +40,7 @@ const Products = () => {
                 key={c}
                 onClick={() => setFilter(c)}
                 className={cn(
-                  "px-5 py-2.5 rounded-full text-sm font-semibold transition-all border",
+                  "px-5 py-2.5 text-sm font-semibold transition-all border",
                   filter === c
                     ? "bg-primary text-primary-foreground border-primary shadow-soft scale-105"
                     : "bg-card text-foreground/80 border-border hover:border-primary/50 hover:text-primary",
@@ -53,24 +53,19 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Masonry layout */}
+      {/* Grid layout — 9:16 portrait cards with sharp edges */}
       <section className="container-px pb-24">
         <div className="mx-auto max-w-7xl">
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
-            {filtered.map((p, i) => {
-              const heightClass =
-                p.span === "tall" ? "h-80" : p.span === "wide" ? "h-72" : "h-60";
-              return (
-                <div
-                  key={p.id}
-                  className="break-inside-avoid mb-6"
-                  data-aos="fade-up"
-                  data-aos-delay={(i % 6) * 60}
-                >
-                  <ProductCard product={p} imageHeightClass={heightClass} />
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filtered.map((p, i) => (
+              <div
+                key={p.id}
+                data-aos="fade-up"
+                data-aos-delay={(i % 6) * 60}
+              >
+                <ProductCard product={p} />
+              </div>
+            ))}
           </div>
 
           {filtered.length === 0 && (
