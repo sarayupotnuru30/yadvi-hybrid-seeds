@@ -99,7 +99,7 @@ const Home = () => {
                 data-aos-delay="450"
               >
                 {[
-                  { n: "30+", l: "Hybrid Varieties" },
+                  { n: "100+", l: "Hybrid Varieties" },
                   { n: "10K+", l: "Happy Farmers" },
                   { n: "100%", l: "Quality Tested" },
                 ].map((s) => (
