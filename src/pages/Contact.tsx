@@ -1,9 +1,18 @@
 import { FormEvent, useState } from "react";
-import { Clock, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock, Instagram, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { products } from "@/data/products";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
+  const [product, setProduct] = useState<string>("");
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -12,6 +21,7 @@ const Contact = () => {
       setSubmitting(false);
       toast.success("Thank you! We'll get back to you within 24 hours.");
       (e.currentTarget as HTMLFormElement).reset();
+      setProduct("");
     }, 800);
   };
 
@@ -69,21 +79,15 @@ const Contact = () => {
                     href: "tel:+919052110028",
                   },
                   {
-                    icon: Mail,
-                    label: "Email",
-                    value: "yadvihybridseeds@gmail.com",
-                    href: "mailto:yadvihybridseeds@gmail.com",
+                    icon: MapPin,
+                    label: "Address",
+                    value: "Andhra Pradesh, India",
+                    href: "https://share.google/RWTPCJqDf6M83hmNP",
                   },
                   {
                     icon: Clock,
                     label: "Business Hours",
                     value: "Mon – Sat · 10 AM – 6 PM",
-                  },
-                  {
-                    icon: MapPin,
-                    label: "Address",
-                    value: "Andhra Pradesh, India",
-                    href: "https://maps.google.com/?q=Yadvi+Hybrid+Seeds",
                   },
                 ].map((c) => {
                   const Inner = (
@@ -159,10 +163,22 @@ const Contact = () => {
               <Field label="Full Name" name="name" placeholder="Your full name" required />
               <Field label="Phone" name="phone" type="tel" placeholder="+91 ..." />
               <div className="sm:col-span-2">
-                <Field label="Email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
-              <div className="sm:col-span-2">
-                <Field label="Subject" name="subject" placeholder="How can we help?" />
+                <label className="block text-sm font-semibold text-foreground mb-2">
+                  Product
+                </label>
+                <input type="hidden" name="product" value={product} />
+                <Select value={product} onValueChange={setProduct}>
+                  <SelectTrigger className="w-full h-12 rounded-2xl border-border bg-background px-4 text-foreground">
+                    <SelectValue placeholder="Select a product you're interested in" />
+                  </SelectTrigger>
+                  <SelectContent className="max-h-72">
+                    {products.map((p) => (
+                      <SelectItem key={p.id} value={p.name}>
+                        {p.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
               <div className="sm:col-span-2">
                 <label className="block text-sm font-semibold text-foreground mb-2">
@@ -196,7 +212,7 @@ const Contact = () => {
         >
           <iframe
             title="Yadvi Hybrid Seeds location"
-            src="https://www.google.com/maps?q=Andhra+Pradesh+India&output=embed"
+            src="https://share.google/RWTPCJqDf6M83hmNP"
             className="w-full h-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
