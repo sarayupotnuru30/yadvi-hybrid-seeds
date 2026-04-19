@@ -1,4 +1,4 @@
-import { Award, Heart, Leaf, Target } from "lucide-react";
+import { Heart } from "lucide-react";
 import surendra from "@/assets/team/surendra.jpeg";
 import subbareddy from "@/assets/team/subbareddy.jpeg";
 import brahmaiah from "@/assets/team/brahmaiah.jpeg";
@@ -100,18 +100,12 @@ const About = () => {
             data-aos="fade-up"
             className="bg-card p-10 border border-border/60 shadow-card hover:shadow-elegant transition-all"
           >
-            <div className="h-14 w-14 bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
-              <Leaf className="h-7 w-7" />
-            </div>
-            <h3 className="mt-5 font-display text-3xl font-semibold">
+            <h3 className="font-display text-3xl font-semibold">
               🌱 Our Vision
             </h3>
             <p className="mt-4 text-lg italic text-foreground/85 leading-relaxed">
               "To expand globally as a recognized brand in hybrid seeds,
               ensuring food security and agricultural excellence."
-            </p>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Verity = 100±
             </p>
           </div>
 
@@ -120,10 +114,7 @@ const About = () => {
             data-aos-delay="120"
             className="bg-card p-10 border border-border/60 shadow-card hover:shadow-elegant transition-all"
           >
-            <div className="h-14 w-14 bg-gradient-leaf grid place-items-center text-primary-foreground shadow-soft">
-              <Target className="h-7 w-7" />
-            </div>
-            <h3 className="mt-5 font-display text-3xl font-semibold">
+            <h3 className="font-display text-3xl font-semibold">
               🌱 Our Mission
             </h3>
             <p className="mt-4 text-lg italic text-foreground/85 leading-relaxed">
@@ -285,7 +276,7 @@ const About = () => {
             <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-sun/30 blur-3xl" />
             <div className="relative grid sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
               {[
-                { n: "30+", l: "Hybrid Varieties" },
+                { n: "100+", l: "Hybrid Varieties" },
                 { n: "10K+", l: "Farmer Network" },
                 { n: "12+", l: "States Served" },
                 { n: "100%", l: "Quality Assured" },
