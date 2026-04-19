@@ -82,7 +82,7 @@ const Contact = () => {
                     icon: MapPin,
                     label: "Address",
                     value: "Andhra Pradesh, India",
-                    href: "https://share.google/RWTPCJqDf6M83hmNP",
+                    href: "https://www.google.com/maps/place/YADVI+HYBRID+SEEDS+PRIVATE+LIMITED/@17.5184394,78.3404849,17z",
                   },
                   {
                     icon: Clock,
@@ -212,7 +212,7 @@ const Contact = () => {
         >
           <iframe
             title="Yadvi Hybrid Seeds location"
-            src="https://share.google/RWTPCJqDf6M83hmNP"
+            src="https://www.google.com/maps?q=YADVI+HYBRID+SEEDS+PRIVATE+LIMITED&ll=17.5184394,78.3430598&z=17&output=embed"
             className="w-full h-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
