@@ -12,13 +12,13 @@ const team = [
     bio: "Visionary leader driving Yadvi's mission to transform Indian agriculture through superior hybrid genetics.",
   },
   {
-    name: "A. V. Subbareddy",
+    name: "C. Brahmaiah",
     role: "Director",
     img: subbareddy,
     bio: "Strategic operations leader ensuring quality seed delivery across regions.",
   },
   {
-    name: "C. Brahmaiah",
+    name: "A. V. Subbareddy",
     role: "Director",
     img: brahmaiah,
     bio: "Field expert and farmer-relations head with deep on-ground experience.",

@@ -81,7 +81,7 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     label: "Address",
-                    value: "Andhra Pradesh, India",
+                    value: "Hyderabad, Telangana",
                     href: "https://www.google.com/maps/place/YADVI+HYBRID+SEEDS+PRIVATE+LIMITED/@17.5184394,78.3404849,17z",
                   },
                   {
