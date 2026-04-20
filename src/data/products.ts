@@ -225,7 +225,7 @@ export const products: Product[] = [
   {
     id: "dolly-26",
     name: "Dolly-26 Research",
-    category: "Chilli",
+    category: "Beans",
     image: dolly26,
     short: "Research chilli line bred for resilience.",
   },

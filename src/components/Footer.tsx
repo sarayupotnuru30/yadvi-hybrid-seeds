@@ -71,7 +71,7 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/yadvihybridseeds?utm_source=qr&igsh=MWwwOHJ2emNldDZhYg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
